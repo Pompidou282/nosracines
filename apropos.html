@@ -1,13 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <title>apropos</title>
+    <title>À Propos - Carrefour Jeunesse Afrique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f6a008;
+            color: #142b40;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+        }
+
+        header .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        header .logo img {
+            max-width: 70px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #142b40;
+            margin: 0 20px;
+            font-size: 18px;
+            padding: 10px 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #a5c217;
+            transform: scale(1.1); /* Effet zoom au survol */
+        }
+
+        /* Contenu de la page À Propos */
+        section {
+            padding: 60px 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #142b40;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .team-member {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #142b40;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #142b40;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    gfgdty
+
+    <!-- HEADER -->
+    <header>
+        Carrefour Jeunesse Afrique - Renouer Nos Racines
+        <div class="logo">
+            <img src="logo.png" alt="Logo de CJA">
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="voyage.html">Voyage</a>
+        <a href="apropos.html">À Propos</a>
+    </nav>
+
+    <!-- SECTION À PROPOS -->
+    <section>
+        <h1>À Propos de Carrefour Jeunesse Afrique</h1>
+        <p>Carrefour Jeunesse Afrique (CJA) est une organisation qui œuvre pour le développement et l'épanouissement des jeunes à travers divers projets éducatifs, culturels et sociaux. Notre mission est de fournir des opportunités aux jeunes afin de favoriser leur réussite dans la vie.</p>
+
+        <p>Nous mettons l'accent sur la formation, l'accompagnement et la sensibilisation afin de faire émerger de nouveaux leaders pour l'avenir du continent africain. Notre engagement envers la jeunesse nous pousse à offrir des ressources et un mentorat tout au long de leur parcours.</p>
+    </section>
+
+    <!-- ÉQUIPE -->
+    <section>
+        <h1>Notre Équipe</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="team1.jpg" alt="Membre 1" style="width:100px; height:100px; border-radius:50%; margin-bottom: 15px;">
+                <h3>Jean Dupont</h3>
+                <p>Président</p>
+                <p>Jean est passionné par le développement des jeunes et dirige CJA avec une vision claire d'avenir pour l'Afrique.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="team2.jpg" alt="Membre 2" style="width:100px; height:100px; border-radius:50%; margin-bottom: 15px;">
+                <h3>Marie Ndiaye</h3>
+                <p>Directrice des Projets</p>
+                <p>Marie supervise les projets de CJA en assurant leur bonne exécution et impact sur la communauté.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="team3.jpg" alt="Membre 3" style="width:100px; height:100px; border-radius:50%; margin-bottom: 15px;">
+                <h3>Ahmed Traoré</h3>
+                <p>Responsable Communication</p>
+                <p>Ahmed est responsable de la communication et veille à la visibilité de l'organisation à travers différents canaux.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2024 Carrefour Jeunesse Afrique
+    </footer>
+
 </body>
 </html>
