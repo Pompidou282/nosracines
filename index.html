@@ -26,7 +26,7 @@
 
         header .logo {
             display: flex;
-            justify-content: center;
+             justify-content: flex-end;
         }
 
         header .logo img {
@@ -76,7 +76,7 @@
         }
 
         /* ANIMATIONS */
-        @keyframes fadeIn {
+       /* @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
@@ -84,7 +84,7 @@
         @keyframes slideIn {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-        }
+        } */
 
         /* Cards (Présentation, Objectifs, Vision, Mission) */
         .cards-container {
@@ -95,14 +95,75 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        .card {
-            background-color: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+      /* Style de base pour les cartes */
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animation d'apparition */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet au survol */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Disposition en grille */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centre les cartes */
+    animation: fadeInGrid 1s ease-in-out;
+}
+
+/* Animation de la grille */
+@keyframes fadeInGrid {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation des cartes individuelles dans la grille */
+.cards-container .card:nth-child(1) {
+    animation: slideIn 0.6s ease-out 0.2s forwards;
+}
+
+.cards-container .card:nth-child(2) {
+    animation: slideIn 0.6s ease-out 0.4s forwards;
+}
+
+.cards-container .card:nth-child(3) {
+    animation: slideIn 0.6s ease-out 0.6s forwards;
+}
+
+/* Animation pour chaque carte */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
         .card h2 {
             font-size: 22px;
@@ -150,25 +211,27 @@
             <p>Carrefour Jeunesse Afrique (CJA), fondée en 2011 à comé, quartier Hongodé, est un centre socio-éducatif qui aide l'enfance et la jeunesse, en se concentrant sur l'amélioration des conditions de vie des
                 plus vulnérables, l'égalité des sexes, et protection des enfants, en particulier des filles et des femmes. À travers des projets éducatifs, culturels et sociaux, CJA soutient les jeunes dans leur parcours pour un avenir meilleur.</p>
         </div>
-
+     <p>   La diaspora africaine rassemble des millions de personnes à travers le monde, porteuses d’une double identité souvent à la recherche d’une reconnexion avec leur terre d’origine.
+        Baignés dans des visions partielles ou négatives relayées par les médias, de nombreux membres de la diaspora recherchent un moyen de redécouvrir leurs racines et de renouer avec leur héritage culturel. </p>
+  <p>Inspiré par les récits de jeunes et d’adultes cherchant à comprendre leurs origines et à se réapproprier leur histoire, Carrefour Jeunesse Afrique (CJA) lance son projet "Renouer avec Nos Racines".  </p>
         <!-- Objectifs -->
         <div class="card">
             <h2>Objectifs</h2>
-            <p>Notre objectif principal est d’accompagner les jeunes dans leur éducation et leur développement personnel. Nous visons à offrir des opportunités d’apprentissage, de leadership et d’épanouissement à travers divers programmes innovants et inclusifs.</p>
+            <p> L’objectif est de permettre aux participants de se reconnecter à leur patrimoine culturel tout en contribuant activement à l’essor du continent.   <br>
+•	Montrer le vrai visage de l’Afrique : Mettre en lumière les initiatives locales et les projets novateurs qui témoignent du potentiel du continent. <br>
+•	Impact local : Encourager la contribution des participants à des projets communautaires structurants.  <br>
+•	Inspiration et collaboration : Stimuler des partenariats entre la diaspora et des acteurs locaux pour soutenir des projets d’avenir.
+</p>
         </div>
 
         <!-- Vision -->
         <div class="card">
             <h2>Vision</h2>
-            <p>Carrefour Jeunesse Afrique vise à réduire les inégalités et à renforcer l'autonomisation des jeunes, en particulier des filles, en offrant à un service d'aide favorisant leur plein potentiel 
-                dans un environnement favorable.</p>
+            <p>Créer un pont solide entre la diaspora et l’Afrique, en favorisant une reconnexion culturelle, une compréhension réaliste des réalités locales et une valorisation des initiatives qui façonnent l’avenir du continent.</p>
         </div>
 
-        <!-- Mission -->
-        <div class="card">
-            <h2>Mission</h2>
-            <p>La mission de CJA est de créer une société africaine où la jeunesse, en particulier les plus vulnérables, s'épanouit pleinement en contribuant activement au développement durable et équitable.</p>
-        </div>
+       
+    
     </div>
 
     <footer>
