@@ -14,13 +14,13 @@
             color: #142b40;
             overflow-x: hidden;
         }
-        header {
-            background-color: #142b40;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
+      header {
+    display: flex;           /* Utilise Flexbox pour une disposition en ligne */
+    justify-content: space-between; /* Espacement entre le texte et le logo */
+    align-items: center;     /* Aligne verticalement le texte et le logo */
+    padding: 10px 20px;      /* Ajoute un peu d'espace autour du header */
+    background-color: #f4f4f4; /* Couleur de fond pour le header */
+}
   header .logo {
     display: flex;           /* Flexbox pour aligner l'image */
     justify-content: center; /* Centre l'image dans la div */
@@ -28,7 +28,7 @@
 
 /* Styles pour l'image (le logo) */
 header .logo img {
-    max-width: 50px;        /* Limite la largeur du logo à 50px */
+    max-width: 70px;        /* Limite la largeur du logo à 50px */
     height: auto;           /* Conserve les proportions de l'image */
 }
         
@@ -89,9 +89,8 @@ header .logo img {
         <a href="apropos.html">À Propos</a>
     </nav>
     <section>
-        <h1>Bienvenue sur Carrefour Jeunesse Afrique</h1>
-        <p> <h2>Découvrez notre projet "Renouer Nos Racines". </h2><br>
-        Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas</p>
+        <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
+        <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas</p>
     </section>
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
