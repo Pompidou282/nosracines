@@ -11,59 +11,95 @@
             margin: 0;
             padding: 0;
             background-color: #f6a008;
-            color: ;
             overflow-x: hidden;
         }
 
         /* HEADER */
         header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-          /*  padding: 2px 5px;*/
-            background-color: #142b40;
-        }
-
-        header .logo {
-            display: flex;
             justify-content: center;
+            align-items: center;
+            background-color: #142b40;
+            padding: 10px 0;
         }
 
-        header .logo img {
-            max-width: 40px;
+        header h1 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .logo img {
+            max-width: 50px;
             height: auto;
+            border: 3px solid white;
+            border-radius: 50%;
+            margin-left: 10px;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            width: 100%;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #f4f4f4;
         }
 
         nav a {
             text-decoration: none;
             color: #142b40;
-            margin: 0 20px;
             font-size: 18px;
             padding: 10px 15px;
-            background-color: #f4f4f4;
+            background-color: white;
             border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background 0.3s;
         }
 
         nav a:hover {
             background-color: #a5c217;
-            transform: scale(1.1); /* Effet zoom au survol */
+        }
+
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .section-container img {
+            max-width: 300px;
+            border-radius: 10px;
         }
 
         section {
-            padding: 40px;
+            padding: 20px;
             background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            width: 80%;
             border-radius: 10px;
-            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         footer {
@@ -74,149 +110,65 @@
             bottom: 0;
             width: 100%;
         }
-
-        /* ANIMATIONS */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Cards (Présentation, Objectifs, Vision, Mission) */
-        .cards-container {
-            display: flex;
-            justify-content: space-around;
-            gap: 30px;
-            margin: 40px 0;
-            animation: fadeIn 2s ease-in-out;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* Style de base pour les cartes */
-        .card {
-            background-color: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        /* Animation d'apparition */
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Effet au survol */
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Animation des cartes individuelles */
-        .cards-container .card:nth-child(1) {
-            animation: slideInLeft 0.6s ease-out 0.2s forwards;
-        }
-
-        .cards-container .card:nth-child(2) {
-            animation: slideInRight 0.6s ease-out 0.4s forwards;
-        }
-
-        .cards-container .card:nth-child(3) {
-            animation: slideInLeft 0.6s ease-out 0.6s forwards;
-        }
-
-        .card h2 {
-            font-size: 22px;
-            color: #142b40;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .card:hover {
-            transform: translateY(-10px); /* Effet de "décalage" lors du survol */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
-        }
     </style>
 </head>
 <body>
     <header>
-        Carrefour Jeunesse Afrique - Renouer Nos Racines
+        <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
         <div class="logo">
             <img src="logo.png" alt="Logo de CJA">
-        </div>  
-    </header>   <br>  
+        </div>
+    </header>
+    
     <nav>
-            <a href="index.html">Accueil</a>
-            <a href="voyage.html">Voyage</a>
-            <a href="apropos.html">À Propos</a>
-        </nav>
-   <br>  <br>  
-        <p>La diaspora africaine rassemble des millions de personnes à travers le monde, porteuses d’une double identité souvent à la recherche d’une reconnexion avec leur terre d’origine. Baignés dans des visions partielles ou négatives relayées par les médias, de nombreux membres de la diaspora recherchent un moyen de redécouvrir leurs racines et de renouer avec leur héritage culturel.</p>
-   
-    <section>
-        <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
-        <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
-    </section>
-
-    <!-- Cards - Présentation, Objectifs, Vision, Mission -->
+        <a href="index.html">Accueil</a>
+        <a href="voyage.html">Voyage</a>
+        <a href="apropos.html">À Propos</a>
+    </nav>
+    
+    <div class="section-container">
+        <img src="projet.jpg" alt="Illustration du projet">
+        <section>
+            <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
+            <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
+        </section>
+    </div>
+    
     <div class="cards-container">
-        <!-- Présentation -->
-        <div class="card">
+        <div class="card" id="presentation">
             <h2>Présentation</h2>
-            <p>Carrefour Jeunesse Afrique (CJA), fondée en 2011 à Comé, est un centre socio-éducatif visant à aider l'enfance et la jeunesse en se concentrant sur l'amélioration des conditions de vie des plus vulnérables, l'égalité des sexes, et la protection des enfants, en particulier des filles et des femmes.</p>
+            <p>Carrefour Jeunesse Afrique (CJA) est un centre socio-éducatif visant à accompagner les jeunes en difficulté.</p>
         </div>
 
-        <!-- Objectifs -->
-        <div class="card">
+        <div class="card" id="objectifs">
             <h2>Objectifs</h2>
-            <p>L’objectif est de permettre aux participants de se reconnecter à leur patrimoine culturel tout en contribuant activement à l’essor du continent.</p>
-            <ul>
-                <li>Montrer le vrai visage de l’Afrique</li>
-                <li>Impact local</li>
-                <li>Inspiration et collaboration</li>
-            </ul>
+            <p>Reconnecter la diaspora africaine avec son patrimoine culturel tout en soutenant des initiatives locales.</p>
         </div>
 
-        <!-- Vision -->
-        <div class="card">
+        <div class="card" id="vision">
             <h2>Vision</h2>
-            <p>Créer un pont solide entre la diaspora et l’Afrique, en favorisant une reconnexion culturelle et une valorisation des initiatives locales qui façonnent l’avenir du continent.</p>
+            <p>Créer un pont entre la diaspora et l’Afrique pour un avenir prospère et solidaire.</p>
         </div>
     </div>
-
+    
+    <section>
+        <h2>Pourquoi ce projet ?</h2>
+        <p>De nombreuses personnes issues de la diaspora africaine ressentent un besoin profond de redécouvrir leurs origines, de mieux comprendre leur histoire et d’établir des liens concrets avec leur pays d’origine. Notre initiative vise à combler ce besoin en proposant des voyages immersifs, des rencontres enrichissantes et un apprentissage culturel authentique.</p>
+    </section>
+    
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("show");
+                }, index * 300);
+            });
+        });
+    </script>
 </body>
 </html>
