@@ -7,95 +7,92 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f6a008;
-            overflow-x: hidden;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
         /* HEADER */
         header {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
             background-color: #142b40;
-            padding: 10px 0;
-        }
-
-        header h1 {
+            padding: 15px 20px;
             color: white;
-            font-size: 15px;
-            margin: 0;
         }
 
         .logo img {
             max-width: 50px;
             height: auto;
-            margin-left: 10px;
-             position: absolute;
-                top: 10px;
-                right: 10px;
+            border-radius: 50%;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 10px 0;
-            background-color: #f4f4f4;
+            gap: 15px;
+            background-color: #eaeaea;
+            padding: 10px;
         }
 
         nav a {
             text-decoration: none;
             color: #142b40;
-            font-size: 18px;
-            padding: 10px 15px;
-            background-color: white;
+            font-weight: bold;
+            padding: 8px 12px;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
 
         nav a:hover {
             background-color: #a5c217;
+            color: white;
         }
 
         .section-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
+            padding: 40px;
+            gap: 30px;
+        }
+
+        .section-container img {
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             padding: 40px;
         }
 
-        .section-container img {
-            max-width: 300px;
-            border-radius: 10px;
-        }
-
-        section {
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cards-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
         .card {
-            background-color: white;
+            background: white;
             padding: 20px;
-            width: 250px;
+            width: 280px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         .card.show {
@@ -107,62 +104,54 @@
             background-color: #142b40;
             color: white;
             padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
-        
+        <h1>Renouer Nos Racines</h1>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de CJA">
+        </div>
     </header>
+    
     <nav>
         <a href="index.html">Accueil</a>
         <a href="voyage.html">Voyage</a>
         <a href="apropos.html">À Propos</a>
     </nav>
-    <div class="logo">
-            <img src="contour.png" alt="Logo de CJA">
-        </div>
+    
     <div class="section-container">
-        <img src="projet.jpeg" alt="Illustration du projet">
+        <img src="projet.jpg" alt="Illustration du projet">
         <section>
-            <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
-            <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
+            <h1>Découvrez notre projet</h1>
+            <p>Participez à une aventure immersive pour renouer avec vos racines africaines.</p>
         </section>
     </div>
     
     <div class="cards-container">
         <div class="card" id="presentation">
             <h2>Présentation</h2>
-            <p>Carrefour Jeunesse Afrique (CJA) est un centre socio-éducatif visant à accompagner les jeunes en difficulté.</p>
+            <p>Carrefour Jeunesse Afrique accompagne les jeunes à travers des initiatives socio-éducatives.</p>
         </div>
 
         <div class="card" id="objectifs">
             <h2>Objectifs</h2>
-            <p>Reconnecter la diaspora africaine avec son patrimoine culturel tout en soutenant des initiatives locales.</p>
+            <p>Créer un lien durable entre la diaspora africaine et ses origines culturelles.</p>
         </div>
 
         <div class="card" id="vision">
             <h2>Vision</h2>
-            <p>Créer un pont entre la diaspora et l’Afrique pour un avenir prospère et solidaire.</p>
+            <p>Favoriser des échanges enrichissants pour un avenir prospère et solidaire.</p>
         </div>
     </div>
-       <br> <br>
+    
     <section>
         <h2>Pourquoi ce projet ?</h2>
-        <p>De nombreuses personnes issues de la diaspora africaine ressentent un besoin profond de redécouvrir leurs origines, de mieux comprendre leur histoire et d’établir des liens concrets avec leur pays d’origine. Notre initiative vise à combler ce besoin en proposant des voyages immersifs, des rencontres enrichissantes et un apprentissage culturel authentique.</p>
+        <p>Nous répondons au besoin de nombreux membres de la diaspora africaine de redécouvrir leurs racines à travers un programme riche en expériences culturelles et humaines.</p>
     </section>
-    <br> <br>
-    <section>
-    <h2>Bon à savoir</h2> <br>
-   <h4> Renouer avec Nos Racines" est bien plus qu’un simple voyage. Ce projet offre une expérience transformatrice conçue pour montrer le vrai visage de l’Afrique et encourager des liens
-    profonds entre la diaspora et le continent. En participant, chaque individu s’engage non seulement à se reconnecter avec son héritage culturel, mais aussi à contribuer activement à 
-    un avenir où la diaspora joue un rôle clé dans l’essor du continent Africain. </h4> <br>
-       <button  <a href="voyage.html"> > Participer  </button> </a>
-    </section>
+    
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
@@ -173,7 +162,7 @@
             cards.forEach((card, index) => {
                 setTimeout(() => {
                     card.classList.add("show");
-                }, index * 300);
+                }, index * 250);
             });
         });
     </script>
