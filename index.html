@@ -15,11 +15,12 @@
             overflow-x: hidden;
         }
 
+        /* HEADER */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px 10px;
+            padding: 10px 20px;
             background-color: #f4f4f4;
         }
 
@@ -33,34 +34,26 @@
             height: auto;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
         nav {
-            margin: 20px 0;
-            animation: slideIn 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
 
         nav a {
             text-decoration: none;
-            color: white;
-            margin: 0 15px;
+            color: #142b40;
+            margin: 0 20px;
             font-size: 18px;
             padding: 10px 15px;
-            background-color: #142b40;
+            background-color: #f4f4f4;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         nav a:hover {
             background-color: #a5c217;
+            transform: scale(1.1); /* Effet zoom au survol */
         }
 
         section {
@@ -82,42 +75,50 @@
             width: 100%;
         }
 
-        .presentation, .objectifs, .vision, .mission {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Cards (Présentation, Objectifs, Vision, Mission) */
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin: 40px 0;
             animation: fadeIn 2s ease-in-out;
         }
 
-        .presentation h2, .objectifs h2, .vision h2, .mission h2 {
-            font-size: 24px;
+        .card {
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card h2 {
+            font-size: 22px;
             color: #142b40;
             margin-bottom: 15px;
         }
 
-        .presentation p, .objectifs p, .vision p, .mission p {
-            font-size: 18px;
+        .card p {
+            font-size: 16px;
             color: #555;
             line-height: 1.6;
         }
 
-        .fadeInUp {
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .card:hover {
+            transform: translateY(-10px); /* Effet de "décalage" lors du survol */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
         }
     </style>
 </head>
@@ -134,34 +135,39 @@
         <a href="voyage.html">Voyage</a>
         <a href="apropos.html">À Propos</a>
     </nav>
-    
+
     <section>
         <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
         <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
     </section>
 
-    <!-- Présentation de CJA -->
-    <div class="presentation fadeInUp">
-        <h2>Présentation de Carrefour Jeunesse Afrique</h2>
-        <p>Carrefour Jeunesse Afrique (CJA) est une organisation dynamique qui œuvre pour le développement et l'épanouissement des jeunes africains. À travers des projets éducatifs, culturels et sociaux, CJA soutient les jeunes dans leur parcours pour un avenir meilleur.</p>
-    </div>
+    <!-- Cards - Présentation, Objectifs, Vision, Mission -->
+    <div class="cards-container">
+        <!-- Présentation -->
+        <div class="card">
+            <h2>Présentation</h2>
+            <p>Carrefour Jeunesse Afrique (CJA), fondée en 2011 à comé, quartier Hongodé, est un centre socio-éducatif qui aide l'enfance et la jeunesse, en se concentrant sur l'amélioration des conditions de vie des
+                plus vulnérables, l'égalité des sexes, et protection des enfants, en particulier des filles et des femmes. À travers des projets éducatifs, culturels et sociaux, CJA soutient les jeunes dans leur parcours pour un avenir meilleur.</p>
+        </div>
 
-    <!-- Objectifs de CJA -->
-    <div class="objectifs fadeInUp">
-        <h2>Objectifs</h2>
-        <p>Notre objectif principal est d’accompagner les jeunes dans leur éducation et leur développement personnel. Nous visons à offrir des opportunités d’apprentissage, de leadership et d’épanouissement à travers divers programmes innovants et inclusifs.</p>
-    </div>
+        <!-- Objectifs -->
+        <div class="card">
+            <h2>Objectifs</h2>
+            <p>Notre objectif principal est d’accompagner les jeunes dans leur éducation et leur développement personnel. Nous visons à offrir des opportunités d’apprentissage, de leadership et d’épanouissement à travers divers programmes innovants et inclusifs.</p>
+        </div>
 
-    <!-- Vision de CJA -->
-    <div class="vision fadeInUp">
-        <h2>Vision</h2>
-        <p>Notre vision est de créer une génération de jeunes leaders engagés, conscients de leurs racines et désireux de contribuer à un développement durable et harmonieux du continent africain.</p>
-    </div>
+        <!-- Vision -->
+        <div class="card">
+            <h2>Vision</h2>
+            <p>Carrefour Jeunesse Afrique vise à réduire les inégalités et à renforcer l'autonomisation des jeunes, en particulier des filles, en offrant à un service d'aide favorisant leur plein potentiel 
+                dans un environnement favorable.</p>
+        </div>
 
-    <!-- Mission de CJA -->
-    <div class="mission fadeInUp">
-        <h2>Mission</h2>
-        <p>La mission de CJA est de fournir des ressources, un mentorat et un soutien pratique aux jeunes à travers l’Afrique, tout en les encourageant à s’impliquer activement dans le changement social et communautaire.</p>
+        <!-- Mission -->
+        <div class="card">
+            <h2>Mission</h2>
+            <p>La mission de CJA est de créer une société africaine où la jeunesse, en particulier les plus vulnérables, s'épanouit pleinement en contribuant activement au développement durable et équitable.</p>
+        </div>
     </div>
 
     <footer>
