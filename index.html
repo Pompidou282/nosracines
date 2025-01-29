@@ -14,36 +14,40 @@
             color: #142b40;
             overflow-x: hidden;
         }
-      header {
-    display: flex;           /* Utilise Flexbox pour une disposition en ligne */
-    justify-content: space-between; /* Espacement entre le texte et le logo */
-    align-items: center;     /* Aligne verticalement le texte et le logo */
-    padding: 10px 20px;      /* Ajoute un peu d'espace autour du header */
-    background-color: #f4f4f4; /* Couleur de fond pour le header */
-}
-  header .logo {
-    display: flex;           /* Flexbox pour aligner l'image */
-    justify-content: center; /* Centre l'image dans la div */
-}
 
-/* Styles pour l'image (le logo) */
-header .logo img {
-    max-width: 70px;        /* Limite la largeur du logo à 50px */
-    height: auto;           /* Conserve les proportions de l'image */
-}
-        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: #f4f4f4;
+        }
+
+        header .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        header .logo img {
+            max-width: 70px;
+            height: auto;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        nav {
-            margin: 20px 0;
-            animation: slideIn 1s ease-in-out;
-        }
+
         @keyframes slideIn {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
+        nav {
+            margin: 20px 0;
+            animation: slideIn 1s ease-in-out;
+        }
+
         nav a {
             text-decoration: none;
             color: white;
@@ -54,9 +58,11 @@ header .logo img {
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             background-color: #a5c217;
         }
+
         section {
             padding: 40px;
             background-color: white;
@@ -66,6 +72,7 @@ header .logo img {
             border-radius: 10px;
             animation: fadeIn 2s ease-in-out;
         }
+
         footer {
             background-color: #142b40;
             color: white;
@@ -74,24 +81,89 @@ header .logo img {
             bottom: 0;
             width: 100%;
         }
+
+        .presentation, .objectifs, .vision, .mission {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .presentation h2, .objectifs h2, .vision h2, .mission h2 {
+            font-size: 24px;
+            color: #142b40;
+            margin-bottom: 15px;
+        }
+
+        .presentation p, .objectifs p, .vision p, .mission p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .fadeInUp {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         Carrefour Jeunesse Afrique - Renouer Nos Racines
-         <div class="logo">
-             <img src="logo.png" alt="Logo de cja">
+        <div class="logo">
+            <img src="logo.png" alt="Logo de CJA">
         </div>
     </header>
+    
     <nav>
         <a href="index.html">Accueil</a>
         <a href="voyage.html">Voyage</a>
         <a href="apropos.html">À Propos</a>
     </nav>
+    
     <section>
         <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
-        <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas</p>
+        <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
     </section>
+
+    <!-- Présentation de CJA -->
+    <div class="presentation fadeInUp">
+        <h2>Présentation de Carrefour Jeunesse Afrique</h2>
+        <p>Carrefour Jeunesse Afrique (CJA) est une organisation dynamique qui œuvre pour le développement et l'épanouissement des jeunes africains. À travers des projets éducatifs, culturels et sociaux, CJA soutient les jeunes dans leur parcours pour un avenir meilleur.</p>
+    </div>
+
+    <!-- Objectifs de CJA -->
+    <div class="objectifs fadeInUp">
+        <h2>Objectifs</h2>
+        <p>Notre objectif principal est d’accompagner les jeunes dans leur éducation et leur développement personnel. Nous visons à offrir des opportunités d’apprentissage, de leadership et d’épanouissement à travers divers programmes innovants et inclusifs.</p>
+    </div>
+
+    <!-- Vision de CJA -->
+    <div class="vision fadeInUp">
+        <h2>Vision</h2>
+        <p>Notre vision est de créer une génération de jeunes leaders engagés, conscients de leurs racines et désireux de contribuer à un développement durable et harmonieux du continent africain.</p>
+    </div>
+
+    <!-- Mission de CJA -->
+    <div class="mission fadeInUp">
+        <h2>Mission</h2>
+        <p>La mission de CJA est de fournir des ressources, un mentorat et un soutien pratique aux jeunes à travers l’Afrique, tout en les encourageant à s’impliquer activement dans le changement social et communautaire.</p>
+    </div>
+
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
