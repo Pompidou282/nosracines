@@ -21,10 +21,16 @@
             font-size: 24px;
             animation: fadeIn 1.5s ease-in-out;
         }
-    header .logo {
-    font-size: 2.5rem;
+  header .logo {
+    display: flex;           /* Flexbox pour aligner l'image */
+    justify-content: center; /* Centre l'image dans la div */
 }
 
+/* Styles pour l'image (le logo) */
+header .logo img {
+    max-width: 50px;        /* Limite la largeur du logo à 50px */
+    height: auto;           /* Conserve les proportions de l'image */
+}
         
         @keyframes fadeIn {
             from { opacity: 0; }
