@@ -26,7 +26,7 @@
 
         header .logo {
             display: flex;
-             justify-content: flex-end;
+            justify-content: flex-end;
         }
 
         header .logo img {
@@ -76,15 +76,32 @@
         }
 
         /* ANIMATIONS */
-       /* @keyframes fadeIn {
+        @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        } */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
         /* Cards (Présentation, Objectifs, Vision, Mission) */
         .cards-container {
@@ -93,77 +110,46 @@
             gap: 30px;
             margin: 40px 0;
             animation: fadeIn 2s ease-in-out;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-      /* Style de base pour les cartes */
-.card {
-    background-color: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-}
+        /* Style de base pour les cartes */
+        .card {
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
-/* Animation d'apparition */
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+        /* Animation d'apparition */
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* Effet au survol */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+        /* Effet au survol */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-/* Disposition en grille */
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Centre les cartes */
-    animation: fadeInGrid 1s ease-in-out;
-}
+        /* Animation des cartes individuelles */
+        .cards-container .card:nth-child(1) {
+            animation: slideInLeft 0.6s ease-out 0.2s forwards;
+        }
 
-/* Animation de la grille */
-@keyframes fadeInGrid {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .cards-container .card:nth-child(2) {
+            animation: slideInRight 0.6s ease-out 0.4s forwards;
+        }
 
-/* Animation des cartes individuelles dans la grille */
-.cards-container .card:nth-child(1) {
-    animation: slideIn 0.6s ease-out 0.2s forwards;
-}
-
-.cards-container .card:nth-child(2) {
-    animation: slideIn 0.6s ease-out 0.4s forwards;
-}
-
-.cards-container .card:nth-child(3) {
-    animation: slideIn 0.6s ease-out 0.6s forwards;
-}
-
-/* Animation pour chaque carte */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .cards-container .card:nth-child(3) {
+            animation: slideInLeft 0.6s ease-out 0.6s forwards;
+        }
 
         .card h2 {
             font-size: 22px;
@@ -190,13 +176,11 @@
             <img src="logo.png" alt="Logo de CJA">
         </div>
         <nav>
-        <a href="index.html">Accueil</a>
-        <a href="voyage.html">Voyage</a>
-        <a href="apropos.html">À Propos</a>
-    </nav>
+            <a href="index.html">Accueil</a>
+            <a href="voyage.html">Voyage</a>
+            <a href="apropos.html">À Propos</a>
+        </nav>
     </header>
-    
-  
 
     <section>
         <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
@@ -208,30 +192,25 @@
         <!-- Présentation -->
         <div class="card">
             <h2>Présentation</h2>
-            <p>Carrefour Jeunesse Afrique (CJA), fondée en 2011 à comé, quartier Hongodé, est un centre socio-éducatif qui aide l'enfance et la jeunesse, en se concentrant sur l'amélioration des conditions de vie des
-                plus vulnérables, l'égalité des sexes, et protection des enfants, en particulier des filles et des femmes. À travers des projets éducatifs, culturels et sociaux, CJA soutient les jeunes dans leur parcours pour un avenir meilleur.</p>
+            <p>Carrefour Jeunesse Afrique (CJA), fondée en 2011 à Comé, est un centre socio-éducatif visant à aider l'enfance et la jeunesse en se concentrant sur l'amélioration des conditions de vie des plus vulnérables, l'égalité des sexes, et la protection des enfants, en particulier des filles et des femmes.</p>
         </div>
-     <p>   La diaspora africaine rassemble des millions de personnes à travers le monde, porteuses d’une double identité souvent à la recherche d’une reconnexion avec leur terre d’origine.
-        Baignés dans des visions partielles ou négatives relayées par les médias, de nombreux membres de la diaspora recherchent un moyen de redécouvrir leurs racines et de renouer avec leur héritage culturel. </p>
-  <p>Inspiré par les récits de jeunes et d’adultes cherchant à comprendre leurs origines et à se réapproprier leur histoire, Carrefour Jeunesse Afrique (CJA) lance son projet "Renouer avec Nos Racines".  </p>
+
         <!-- Objectifs -->
         <div class="card">
             <h2>Objectifs</h2>
-            <p> L’objectif est de permettre aux participants de se reconnecter à leur patrimoine culturel tout en contribuant activement à l’essor du continent.   <br>
-•	Montrer le vrai visage de l’Afrique : Mettre en lumière les initiatives locales et les projets novateurs qui témoignent du potentiel du continent. <br>
-•	Impact local : Encourager la contribution des participants à des projets communautaires structurants.  <br>
-•	Inspiration et collaboration : Stimuler des partenariats entre la diaspora et des acteurs locaux pour soutenir des projets d’avenir.
-</p>
+            <p>L’objectif est de permettre aux participants de se reconnecter à leur patrimoine culturel tout en contribuant activement à l’essor du continent.</p>
+            <ul>
+                <li>Montrer le vrai visage de l’Afrique</li>
+                <li>Impact local</li>
+                <li>Inspiration et collaboration</li>
+            </ul>
         </div>
 
         <!-- Vision -->
         <div class="card">
             <h2>Vision</h2>
-            <p>Créer un pont solide entre la diaspora et l’Afrique, en favorisant une reconnexion culturelle, une compréhension réaliste des réalités locales et une valorisation des initiatives qui façonnent l’avenir du continent.</p>
+            <p>Créer un pont solide entre la diaspora et l’Afrique, en favorisant une reconnexion culturelle et une valorisation des initiatives locales qui façonnent l’avenir du continent.</p>
         </div>
-
-       
-    
     </div>
 
     <footer>
