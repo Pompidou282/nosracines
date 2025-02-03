@@ -7,75 +7,83 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f6a008;
+            background-color: #f8f9fa;
         }
-
-        /* HEADER */
+        
         header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: #142b40;
-            padding: 15px 0;
-        }
-
-        header h1 {
+            padding: 15px 20px;
             color: white;
-            font-size: 18px;
-            margin: 0;
         }
-
-        /* CONTENU PRINCIPAL */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #142b40;
-            font-size: 22px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #a5c217;
+        
+        nav a {
             color: white;
-            font-size: 18px;
-            font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 0 15px;
+            font-size: 18px;
         }
-
-        .btn:hover {
-            background-color: #8ba30f;
-            transform: scale(1.05);
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
-
-        /* FOOTER */
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .information {
+            background-color: #f6a008;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .inscription {
+            background: linear-gradient(to right, #142b40, #a5c217);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .programme {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .durée {
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+        
+        .thématique {
+            background: #142b40;
+            color: white;
+            text-align: center;
+        }
+        
+        .impact {
+            background: #a5c217;
+            color: white;
+            text-align: center;
+        }
+        
         footer {
             background-color: #142b40;
             color: white;
-            padding: 15px;
             text-align: center;
+            padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -84,44 +92,25 @@
 </head>
 <body>
     <header>
-        <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
+        <h1>Carrefour Jeunesse Afrique</h1>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Voyage</a>
+            <a href="#">À Propos</a>
+        </nav>
     </header>
-
+    
     <div class="container">
-        <div class="section">
-            <h2>Informations</h2>
-            <p>Découvrez notre programme exceptionnel conçu pour reconnecter la diaspora africaine avec ses racines culturelles et historiques.</p>
-        </div>
-
-        <div class="section">
-            <h2>Inscription</h2>
-            <p>Les places sont limitées ! Inscrivez-vous dès maintenant pour vivre une expérience unique et immersive.</p>
-            <a href="inscription.html" class="btn">S'inscrire</a>
-        </div>
-
-        <div class="section">
-            <h2>Programme</h2>
-            <p>Un voyage enrichissant de deux semaines au Bénin avec des visites culturelles, des rencontres inspirantes et des activités immersives.</p>
-        </div>
-
-        <div class="section">
-            <h2>Durée</h2>
-            <p>Le programme s’étend sur 14 jours, avec un parcours soigneusement conçu pour maximiser votre expérience.</p>
-        </div>
-
-        <div class="section">
-            <h2>Thématiques Abordées</h2>
-            <p>Histoire et patrimoine, entrepreneuriat, traditions culturelles, échanges intergénérationnels et bien plus encore !</p>
-        </div>
-
-        <div class="section">
-            <h2>Impact</h2>
-            <p>Une reconnexion profonde avec l’Afrique, un réseau de contacts enrichi et une vision renouvelée de votre identité.</p>
-        </div>
+        <div class="section information">📢 Découvrez une aventure unique pour renouer avec vos racines africaines.</div>
+        <div class="section inscription">📝 Inscrivez-vous dès maintenant pour une expérience inoubliable !</div>
+        <div class="section programme">📅 Programme détaillé avec visites culturelles et ateliers éducatifs.</div>
+        <div class="section durée">⏳ Durée : 2 semaines d'immersion totale au Bénin.</div>
+        <div class="section thématique">🎭 Thématiques abordées : Histoire, culture, artisanat et engagement social.</div>
+        <div class="section impact">🌍 Impact : Un voyage qui change votre perception et vous reconnecte à vos racines.</div>
     </div>
-
+    
     <footer>
-        &copy; 2024 Carrefour Jeunesse Afrique
+        &copy; 2024 Carrefour Jeunesse Afrique - Tous droits réservés.
     </footer>
 </body>
 </html>
