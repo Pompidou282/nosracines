@@ -106,7 +106,7 @@
 .marquee-content {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 10s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 /* Animation du texte */
@@ -151,8 +151,28 @@
             bottom: 0;
             width: 100%;
         }
+        /* Style du bouton Participer */
+.btn-participer {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #a5c217;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol */
+.btn-participer:hover {
+    background-color: #8ba30f;
+    transform: scale(1.05);
+}
+
     </style>
 </head>
+    
 <body>
     <header>
         <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
@@ -199,16 +219,13 @@
     <br> <br>
    <div class="marquee-container">
     <div class="marquee-content">
-        <span>Bon à savoir : </span> Carrefour Jeunesse Afrique accompagne les jeunes à travers des initiatives socio-éducatives et culturelles enrichissantes.
+        <span>Bon à savoir : </span> Renouer avec Nos Racines, </h4> est bien plus qu’un simple voyage..
     </div>
 </div>
+   <br>
   <br>
-   <h4> Renouer avec Nos Racines" </h4> est bien plus qu’un simple voyage. Ce projet n’est pas seulement un retour aux sources. C’est une opportunité de redécouvrir une identité souvent
-       fragmentée, de tisser des liens profonds avec le continent et d’agir en tant qu’acteurs du changement. Via des rencontres, des échanges et des actions concrètes,
-       chaque participant fait un pas vers une reconnexion profonde avec ses racines et contribue à écrire un futur où diaspora et continent se renforcent mutuellement,
-       dans un esprit de solidarité. Le premier séjour de ce programme se déroulera au Bénin, berceau de traditions riches et de récits fondateurs de l’histoire africaine.  <br>
-  <br>
-     <button  <a href="voyage.html"> > Participer  </button> </a> <br>
+    <a href="voyage.html" class="btn-participer">Participer</a>
+ <br>
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
