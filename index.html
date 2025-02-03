@@ -72,6 +72,7 @@
 
         .section-container {
             display: flex;
+             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 20px;
@@ -80,6 +81,7 @@
 
         .section-container img {
             max-width: 300px;
+             height: auto;
             border-radius: 10px;
         }
 
@@ -89,36 +91,33 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Conteneur du texte défilant */
-.marquee-container {
+     .bon-a-savoir-container {
     width: 100%;
+    max-width: 600px;
+    height: 50px;
     overflow: hidden;
-    background-color: #142b40;
+    position: relative;
+    background: #a5c217;
     color: white;
-    padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    position: relative;
-    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
-/* Texte défilant */
-.marquee-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 30s linear infinite;
+.bon-a-savoir-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Animation du texte */
-@keyframes marquee {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.bon-a-savoir-slide.active {
+    opacity: 1;
 }
-
 
         .cards-container {
             display: flex;
@@ -217,11 +216,18 @@
     </div>
        <br> <br>
     <br> <br>
-   <div class="marquee-container">
-    <div class="marquee-content">
-        <span>Bon à savoir : </span> Renouer avec Nos Racines, </h4> est bien plus qu’un simple voyage..
+   <div class="bon-a-savoir-container">
+    <div class="bon-a-savoir-slide">
+        <p>💡 Le voyage permet de découvrir ses racines et son identité.</p>
+    </div>
+    <div class="bon-a-savoir-slide">
+        <p>🌍 Chaque culture a une histoire unique à raconter.</p>
+    </div>
+    <div class="bon-a-savoir-slide">
+        <p>🛤️ Renouer avec ses origines renforce le sentiment d’appartenance.</p>
     </div>
 </div>
+
    <br>
   <br>
     <a href="voyage.html" class="btn-participer">Participer</a>
