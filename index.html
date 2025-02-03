@@ -89,6 +89,36 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        /* Conteneur du texte défilant */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #142b40;
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Texte défilant */
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+/* Animation du texte */
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 
         .cards-container {
             display: flex;
@@ -167,9 +197,12 @@
     </div>
        <br> <br>
     <br> <br>
-    <section>
-    <h2>Bon à savoir</h2>  
-    </section>  <br>
+   <div class="marquee-container">
+    <div class="marquee-content">
+        <span>Bon à savoir : </span> Carrefour Jeunesse Afrique accompagne les jeunes à travers des initiatives socio-éducatives et culturelles enrichissantes.
+    </div>
+</div>
+  <br>
    <h4> Renouer avec Nos Racines" </h4> est bien plus qu’un simple voyage. Ce projet n’est pas seulement un retour aux sources. C’est une opportunité de redécouvrir une identité souvent
        fragmentée, de tisser des liens profonds avec le continent et d’agir en tant qu’acteurs du changement. Via des rencontres, des échanges et des actions concrètes,
        chaque participant fait un pas vers une reconnexion profonde avec ses racines et contribue à écrire un futur où diaspora et continent se renforcent mutuellement,
