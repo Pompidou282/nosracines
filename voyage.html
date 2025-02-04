@@ -11,21 +11,59 @@
             padding: 0;
             background-color: #f8f9fa;
         }
+             body h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #142b40;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
         
+     /* HEADER */
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             background-color: #142b40;
-            padding: 15px 20px;
-            color: white;
+            padding: 10px 0;
         }
-        
-        nav a {
+
+        header h1 {
             color: white;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .logo img {
+            max-width: 50px;
+            height: auto;
+            margin-left: 10px;
+             position: absolute;
+                top: 10px;
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #f4f4f4;
+        }
+
+        nav a {
             text-decoration: none;
-            margin: 0 15px;
+            color: #142b40;
             font-size: 18px;
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #a5c217;
         }
         
         .container {
@@ -102,7 +140,6 @@
     <div class="logo">
             <img src="contour.png" alt="Logo de CJA">
         </div>
-    </header>
     
     <div class="container">
         <div class="section information">📢 Découvrez une aventure unique pour renouer avec vos racines africaines.</div>
