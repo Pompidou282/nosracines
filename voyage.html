@@ -7,11 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f6a008;;
+            overflow-x: hidden;
         }
-             body h4 {
+        body h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: #142b40;
@@ -21,8 +23,8 @@
     transform: translateY(10px);
     animation: fadeInUp 0.8s ease-out forwards;
 }
-        
-     /* HEADER */
+
+        /* HEADER */
         header {
             display: flex;
             justify-content: center;
@@ -43,6 +45,8 @@
             margin-left: 10px;
              position: absolute;
                 top: 10px;
+                right: 10px;
+        }
 
         nav {
             display: flex;
@@ -65,8 +69,29 @@
         nav a:hover {
             background-color: #a5c217;
         }
-        
-        .container {
+
+        .section-container {
+            display: flex;
+             flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .section-container img {
+            max-width: 300px;
+             height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
@@ -116,18 +141,42 @@
             color: white;
             text-align: center;
         }
-        
+   
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         footer {
             background-color: #142b40;
             color: white;
-            text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+        /* Style du bouton Participer */
+.btn-participer {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #a5c217;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol */
+.btn-participer:hover {
+    background-color: #8ba30f;
+    transform: scale(1.05);
+}
+
     </style>
 </head>
+    
 <body>
     <header>
         <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
@@ -140,7 +189,16 @@
     <div class="logo">
             <img src="contour.png" alt="Logo de CJA">
         </div>
-    
+    <div class="section-container">
+        <img src="projet.jpeg" alt="Illustration du projet">
+        <section>
+            <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
+            <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
+        </section>
+    </div>
+       <br> <br>
+    <br> <br>
+
     <div class="container">
         <div class="section information">📢 Découvrez une aventure unique pour renouer avec vos racines africaines.</div>
         <div class="section inscription">📝 Inscrivez-vous dès maintenant pour une expérience inoubliable !</div>
@@ -150,8 +208,40 @@
         <div class="section impact">🌍 Impact : Un voyage qui change votre perception et vous reconnecte à vos racines.</div>
     </div>
     
+   <br>
+  <br>
+    <a href="voyage.html" class="btn-participer">Participer</a>
+ <br>
     <footer>
-        &copy; 2024 Carrefour Jeunesse Afrique - Tous droits réservés.
+        &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("show");
+                }, index * 300);
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".bon-a-savoir-slide");
+        let index = 0;
+
+        function showNextSlide() {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+
+            index = (index + 1) % slides.length;
+        }
+
+        showNextSlide(); // Afficher le premier élément
+        setInterval(showNextSlide, 3000); // Défilement toutes les 3 secondes
+    });
+</script>
+
 </body>
 </html>
