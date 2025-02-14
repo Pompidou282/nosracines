@@ -56,6 +56,68 @@
             background-color: #f4f4f4;
         }
 
+       /* SECTION CONTACTS */
+.contacts {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.contacts h1 {
+    color: #142b40;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contacts .contact-info {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contacts .contact-info p {
+    margin: 10px 0;
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form label {
+    font-size: 18px;
+    color: #142b40;
+}
+
+form input, form textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #a5c217;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet sur le bouton */
+form button:hover {
+    background-color: #8ba30f;
+    transform: scale(1.05);
+}
+
+
         nav a {
             text-decoration: none;
             color: #142b40;
@@ -201,8 +263,33 @@
 
         <p>Nous mettons l'accent sur la formation, l'accompagnement et la sensibilisation afin de faire émerger de nouveaux leaders pour l'avenir du continent africain. Notre engagement envers la jeunesse nous pousse à offrir des ressources et un mentorat tout au long de leur parcours.</p>
     </section>
+  
+     <!-- SECTION CONTACTS -->
+<section class="contacts">
+    <h1>Contactez-nous</h1>
+    <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter à l'une des adresses suivantes :</p>
 
-   
+    <div class="contact-info">
+        <p><strong>Adresse :</strong> Carrefour Jeunesse Afrique, Comé, Bénin</p>
+        <p><strong>Téléphone :</strong> .............</p>
+        <p><strong>Email :</strong> ...........................</p>
+    </div>
+
+    <!-- Formulaire de contact (optionnel) -->
+    <form action="mailto:contact@carrefourjeunesseafrique.org" method="POST" enctype="text/plain">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn-participer">Envoyer</button>
+    </form>
+</section>
+ 
 
     <!-- FOOTER -->
     <footer>
