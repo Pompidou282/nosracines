@@ -3,89 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme détaillé</title>
+    <title>Carrefour Jeunesse Afrique - Renouer Nos Racines</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f6a008;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #142b40;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .logo img {
+            max-width: 50px;
+            height: auto;
+            margin-left: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
             background-color: #f4f4f4;
         }
-        .title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-top: 20px;
-            color: #333;
-        }
-        .content {
-            width: 80%;
-            max-width: 700px;
-            padding: 20px;
-            border-top: 2px solid #333;
-            background: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease-out forwards;
-        }
-        .content ol {
-            text-align: left;
-            padding-left: 20px;
-        }
-        .content li {
-            background: #e3e3e3;
-            padding: 15px;
-            margin: 10px 0;
+
+        nav a {
+            text-decoration: none;
+            color: #142b40;
+            font-size: 18px;
+            padding: 10px 15px;
+            background-color: white;
             border-radius: 5px;
-            transition: 0.3s;
+            transition: background 0.3s;
         }
-        .content li:hover {
-            background: #d1d1d1;
-            transform: scale(1.02);
+
+        nav a:hover {
+            background-color: #a5c217;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        /* SECTION CONTAINER */
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .section-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* AMÉLIORATIONS DES SECTIONS PROGRAMME, DURÉE ET THÉMATIQUES */
+        .section-programme,
+        .section-duree,
+        .section-thematique {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .section-programme h2,
+        .section-duree h2,
+        .section-thematique h2 {
+            font-size: 1.8em;
+            color: #142b40;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section-programme ul,
+        .section-duree ul,
+        .section-thematique ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section-programme li,
+        .section-duree li,
+        .section-thematique li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            padding: 8px 0;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .section-programme li:last-child,
+        .section-duree li:last-child,
+        .section-thematique li:last-child {
+            border-bottom: none;
+        }
+
+        .section-programme li:hover,
+        .section-duree li:hover,
+        .section-thematique li:hover {
+            background-color: #f6a008;
+            color: white;
+            cursor: pointer;
+            padding-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* AMÉLIORATIONS DES BOUTONS */
+        .btn-participer {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #a5c217;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        .btn-participer:hover {
+            background-color: #8ba30f;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #142b40;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
-    <div class="title">Programme détaillé</div>
-    <div class="content">
-        <ol>
-            <li>
-                <h2>Introduction</h2>
-                <p>Présentation des objectifs et du déroulement du programme (Durée : 30 min).</p>
-            </li>
-            <li>
-                <h2>Thématique 1 : Leadership</h2>
-                <p>Exploration des qualités essentielles d'un leader et mise en pratique (Durée : 1h).</p>
-            </li>
-            <li>
-                <h2>Thématique 2 : Communication efficace</h2>
-                <p>Techniques et stratégies pour améliorer la communication interpersonnelle (Durée : 1h30).</p>
-            </li>
-            <li>
-                <h2>Atelier pratique</h2>
-                <p>Études de cas et mises en situation pour renforcer les acquis (Durée : 2h).</p>
-            </li>
-            <li>
-                <h2>Clôture et évaluation</h2>
-                <p>Retour d'expérience, évaluation et conclusion (Durée : 30 min).</p>
-            </li>
-        </ol>
+    <header>
+        <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
+    </header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="voyage.html">Voyage</a>
+        <a href="apropos.html">À Propos</a>
+    </nav>
+    <div class="logo">
+        <img src="contour.png" alt="Logo de CJA">
     </div>
+
+    <div class="container">
+        <!-- Programme -->
+        <div class="section programme section-programme">
+            <h2>📅 Programme détaillé</h2>
+            <ul>
+                <li><h3>6 janvier :</h3> Accueil des participants, installation et présentation du programme.</li>
+                <li><h3>7 janvier :</h3> Rencontre avec les autorités et les différents services déconcentrés. Visite du centre Carrefour Jeunesse + rencontre avec le noyau de jeunes.</li>
+                <li><h3>8 janvier :</h3> Départ pour Porto-Novo et visite du centre SONGHAI (agriculture durable, énergies renouvelables, artisanat moderne).</li>
+                <li><h3>9 janvier :</h3> Départ pour Ouidah pour le festival Vodoun Days.</li>
+                <li><h3>10 janvier :</h3> Fête du Vodou à Ouidah : découverte des rituels, danses et chants traditionnels. Rencontre avec des figures culturelles et spirituelles.</li>
+                <li><h3>11 janvier :</h3> Séminaire sur l’entrepreneuriat et le leadership. Rencontre avec les membres de la diaspora ayant investi au Bénin.</li>
+                <li><h3>12 janvier :</h3> Rencontre intergénérationnelle sur la thématique de la valorisation de la femme africaine.</li>
+                <li><h3>13 janvier :</h3> Exploration des sites historiques (Abomey) et des initiatives patrimoniales.</li>
+                <li><h3>14 janvier :</h3> L’histoire de la colonisation racontée par un historien béninois, suivie d’un débat.</li>
+                <li><h3>15 janvier :</h3> Visite de Grand Popo et détente (danse autour du feu).</li>
+                <li><h3>16 janvier :</h3> Cérémonie de clôture et présentation des retours d’expérience des participants.</li>
+            </ul>
+        </div>
+
+        <!-- Durée -->
+        <div class="section durée section-duree">
+            <h2>⏳ Durée du programme</h2>
+            <ul>
+                <li><h3>Dates :</h3> 6 au 16 janvier.</li>
+                <li><h3>Lieu :</h3> Bénin, avec des activités organisées dans plusieurs villes.</li>
+                <li><h3>Villes :</h3> Cotonou, Ouidah, Abomey et Porto-Novo.</li>
+            </ul>
+        </div>
+
+        <!-- Thématiques -->
+        <div class="section thématique section-thematique">
+            <h2>🎭 Thématiques abordées</h2>
+            <ul>
+                <li>Culture et traditions africaines</li>
+                <li>Histoire africaine</li>
+                <li>Entrepreneuriat et leadership</li>
+                <li>Développement durable</li>
+                <li>Dialogue intergénérationnel</li>
+                <li>Tourisme et patrimoine</li>
+            </ul>
+        </div>
+
+        <!-- Bouton Participer -->
+        <a href="voyage.html" class="btn-participer">Participer</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Carrefour Jeunesse Afrique
+    </footer>
 </body>
 </html>
