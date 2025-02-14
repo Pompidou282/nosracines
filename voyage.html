@@ -10,19 +10,9 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f6a008;;
+            background-color: #f6a008;
             overflow-x: hidden;
         }
-        body h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #142b40;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
 
         /* HEADER */
         header {
@@ -43,9 +33,9 @@
             max-width: 50px;
             height: auto;
             margin-left: 10px;
-             position: absolute;
-                top: 10px;
-                right: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
 
         nav {
@@ -69,19 +59,58 @@
         nav a:hover {
             background-color: #a5c217;
         }
+
+        /* SECTION CONTAINER */
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .section-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+            /* Section Thématique */
+.section.thématique {
+    background: linear-gradient(to right, #142b40, #a5c217); /* Dégradé entre bleu foncé et vert */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* AMÉLIORATIONS DES SECTIONS PROGRAMME, DURÉE ET THÉMATIQUES */
         .section-programme,
         .section-duree,
         .section-thematique {
             background-color: #ffffff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-        }
-        
-        .section-thematique {
-            background-color: #142b40;
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -128,127 +157,37 @@
             padding-left: 10px;
             transition: all 0.3s ease;
         }
-        .section-container {
-            display: flex;
-             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px;
-        }
 
-        .section-container img {
-            max-width: 300px;
-             height: auto;
-            border-radius: 10px;
-        }
-
-        section {
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .information {
-            background-color: #f6a008;
+        /* AMÉLIORATIONS DES BOUTONS */
+        .btn-participer {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #a5c217;
             color: white;
-            text-align: center;
-            padding: 50px 20px;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: bold;
-        }
-        
-        .inscription {
-            background: linear-gradient(to right, #142b40, #a5c217);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .programme {
-            background-color: #ffffff;
-            text-align: center;
-        }
-         .title {
-            font-size: 2.5em;
-            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
             margin-top: 20px;
         }
-      
-        .content {
-            width: 80%;
-            max-width: 600px;
-            padding: 20px;
-            border-top: 2px solid #333;
-        }
-        .content ol {
-            text-align: left;
-        
-        .durée {
-            background-color: #e3f2fd;
-            text-align: center;
-        }
-        
-        .thématique {
-            background: #102b40;
-            color: white;
-            text-align: center;
-        }
-        
-        .impact {
-            background: #a5d217;
-            color: white;
-            text-align: center;
-        }
-   
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
+
+        .btn-participer:hover {
+            background-color: #8ba30f;
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #102b40;
+            background-color: #142b40;
             color: white;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
-        /* Style du bouton Participer */
-.btn-participer {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #a5c217;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* Effet au survol */
-.btn-participer:hover {
-    background-color: #8ba30f;
-    transform: scale(1.05);
-}
-
     </style>
 </head>
-    
+
 <body>
     <header>
         <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
@@ -259,55 +198,11 @@
         <a href="apropos.html">À Propos</a>
     </nav>
     <div class="logo">
-            <img src="contour.png" alt="Logo de CJA">
-        </div>
-    <div class="section-container">
-        <img src="projet.jpeg" alt="Illustration du projet">
-        <section>
-            <h1>Découvrez notre projet "Renouer Nos Racines"</h1>
-            <p>Rejoignez le programme et participez à cette expérience unique. Les places sont limitées, alors ne tardez pas.</p>
-        </section>
+        <img src="contour.png" alt="Logo de CJA">
     </div>
-       <br> <br>
-    <br> <br>
 
     <div class="container">
-        <div class="section information">📢 Découvrez une aventure unique pour renouer avec vos racines africaines.</div>
-        <div class="section inscription">📝 Inscrivez-vous dès maintenant pour une expérience inoubliable !
-                <div class="title">Modalités de Participation</div>
-                <div class="content">
-                <ol>
-                        <li>
-                            <h2>Critères de Participation</h2>
-                            <p>Ce programme est ouvert à tous les membres de la diaspora africaine, sans limite d’âge. Aucune compétence préalable n’est requise, 
-                                mais une forte motivation et un désir d’engagement sont recommandés.</p>
-                        </li>
-               </ol>    
-        
-            <li>
-                    <h2>Coût et Inclusions</h2>
-                    <p>  
-                            <div class="content">
-                                    <ol>
-                                        <li> <h2> Prix du séjour : 900 euros (hors billet d’avion).</h2> <li> Ce tarif inclut :</li>
-                                        <li> Hébergement</li>
-                                        <li> Repas quotidiens</li>  
-                                        <li> Transport local</li>  
-                                        <li> Participation à toutes les activités et visites.</li>  
-                                        <li> Billets d’avion : À la charge des participants.</li>  
-                                    </ol>
-                          </div>    
-                    </p>
-                    	<h2>Le paiement se fait sur le compte suivant : .........................objet.......</h2>
-                         <p> Après paiement, veillez bien envoyé la facture sur le mail :...........Vous recevrez au plus dans 24h, une message de confirmation
-                             de votre inscription.  </p> 
-            </li>
-           
-        </div>
-             </div>
-
-        
-         <!-- Programme -->
+        <!-- Programme -->
         <div class="section programme section-programme">
             <h2>📅 Programme détaillé</h2>
             <ul>
@@ -325,54 +220,35 @@
             </ul>
         </div>
 
-        <div class="section durée">⏳ Durée : 10 jours d'immersion totale au Bénin. 
-             <div class="content">
-                <ol>
-                    <li> <h2>Dates : </h2> <li> 6 au 16 janvier.</li>
-                    <li> <h2>Lieu : </h2>Bénin, avec des activités organisées dans plusieurs villes</li>
-                    <li> <h2>Ville : </h2>Cotonou, Ouidah, Abomey et Porto-No </li>  
-                </ol>
-            </div>    
+        <!-- Durée -->
+        <div class="section durée section-duree">
+            <h2>⏳ Durée du programme</h2>
+            <ul>
+                <li><h3>Dates :</h3> 6 au 16 janvier.</li>
+                <li><h3>Lieu :</h3> Bénin, avec des activités organisées dans plusieurs villes.</li>
+                <li><h3>Villes :</h3> Cotonou, Ouidah, Abomey et Porto-Novo.</li>
+            </ul>
         </div>
-        <div class="section thématique">🎭 Thématiques abordées : Culture et traditions africaines, Histoire africaine, Entrepreneuriat et leadership,
-            Développement durable, Dialogue intergénérationnel, Tourisme et patrimoine .</div>
-        <div class="section impact">🌍 Impact : Un voyage qui change votre perception et vous reconnecte à vos racines.</div>
+
+        <!-- Thématiques -->
+        <div class="section thématique section-thematique">
+            <h2>🎭 Thématiques abordées</h2>
+            <ul>
+                <li>Culture et traditions africaines</li>
+                <li>Histoire africaine</li>
+                <li>Entrepreneuriat et leadership</li>
+                <li>Développement durable</li>
+                <li>Dialogue intergénérationnel</li>
+                <li>Tourisme et patrimoine</li>
+            </ul>
+        </div>
+
+        <!-- Bouton Participer -->
+        <a href="voyage.html" class="btn-participer">Participer</a>
     </div>
-    
-   <br>
-  <br>
-    <a href="voyage.html" class="btn-participer">Participer</a>
- <br>
+
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cards = document.querySelectorAll(".card");
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add("show");
-                }, index * 300);
-            });
-        });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const slides = document.querySelectorAll(".bon-a-savoir-slide");
-        let index = 0;
-
-        function showNextSlide() {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[index].classList.add("active");
-
-            index = (index + 1) % slides.length;
-        }
-
-        showNextSlide(); // Afficher le premier élément
-        setInterval(showNextSlide, 3000); // Défilement toutes les 3 secondes
-    });
-</script>
-
 </body>
 </html>
