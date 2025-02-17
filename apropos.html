@@ -9,20 +9,16 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f6a008;
             overflow-x: hidden;
         }
 
-        h4 {
+        h1, h4 {
             font-family: 'Poppins', sans-serif;
-            font-weight: bold;
             color: #142b40;
             text-transform: uppercase;
             letter-spacing: 1px;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeInUp 0.8s ease-out forwards;
         }
 
         /* HEADER */
@@ -31,18 +27,20 @@
             justify-content: center;
             align-items: center;
             background-color: #142b40;
-            padding: 10px 0;
+            padding: 20px;
             position: relative;
+            margin-bottom: 30px;
+            border-radius: 10px;
         }
 
         header h1 {
             color: white;
-            font-size: 15px;
+            font-size: 20px;
             margin: 0;
         }
 
         .logo img {
-            max-width: 50px;
+            max-width: 60px;
             height: auto;
             position: absolute;
             top: 10px;
@@ -54,15 +52,17 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            padding: 10px 0;
+            padding: 15px 0;
             background-color: #f4f4f4;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
 
         nav a {
             text-decoration: none;
             color: #142b40;
             font-size: 18px;
-            padding: 10px 15px;
+            padding: 12px 20px;
             background-color: white;
             border-radius: 5px;
             transition: background 0.3s;
@@ -77,6 +77,7 @@
             display: flex;
             justify-content: center;
             width: 100%;
+            margin-bottom: 30px;
         }
 
         .image-container img {
@@ -88,15 +89,15 @@
         /* SECTION CONTACTS */
         .contacts {
             background-color: #f4f4f4;
-            padding: 40px 20px;
+            padding: 40px;
             text-align: center;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            margin: 30px auto;
+            max-width: 600px;
         }
 
         .contacts h1 {
-            color: #142b40;
             font-size: 2rem;
             margin-bottom: 20px;
         }
@@ -133,9 +134,9 @@
             background-color: #142b40;
             color: white;
             padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative;
+            margin-top: 40px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -161,7 +162,7 @@
     <!-- SECTION CONTACTS -->
     <section class="contacts">
         <h1>Contactez-nous</h1>
-        <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter à l'une des adresses suivantes :</p>
+        <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter :</p>
         <div class="contact-info">
             <p><strong>Responsable : DEGNON Israël</strong> - +229 0160526867</p>
         </div>
