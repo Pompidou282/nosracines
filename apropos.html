@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -10,19 +10,20 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f6a008;;
+            background-color: #f6a008;
             overflow-x: hidden;
         }
-        body h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #142b40;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
+
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: #142b40;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
 
         /* HEADER */
         header {
@@ -31,6 +32,7 @@
             align-items: center;
             background-color: #142b40;
             padding: 10px 0;
+            position: relative;
         }
 
         header h1 {
@@ -42,12 +44,12 @@
         .logo img {
             max-width: 50px;
             height: auto;
-            margin-left: 10px;
-             position: absolute;
-                top: 10px;
-                right: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
 
+        /* NAVIGATION */
         nav {
             display: flex;
             justify-content: center;
@@ -55,40 +57,6 @@
             padding: 10px 0;
             background-color: #f4f4f4;
         }
-
-       /* SECTION CONTACTS */
-.contacts {
-    background-color: #f4f4f4;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-.contacts h1 {
-    color: #142b40;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contacts .contact-info {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.contacts .contact-info p {
-    margin: 10px 0;
-}
-
-
-
-/* Effet sur le bouton */
-form button:hover {
-    background-color: #8ba30f;
-    transform: scale(1.05);
-}
-
 
         nav a {
             text-decoration: none;
@@ -104,104 +72,63 @@ form button:hover {
             background-color: #a5c217;
         }
 
-       .image-container {
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement (si hauteur définie) */
-    width: 100%; /* Prend toute la largeur */
-}
-
-.image-container img {
-    max-width: 300px; /* Réduit l’image */
-    height: auto; /* Garde les proportions */
-    border-radius: 10px; /* Coins arrondis pour un effet stylé */
-}
-
-
-       
-
-        section {
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-     .bon-a-savoir-container {
-    width: 100%;
-    max-width: 600px;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
-    background: #a5c217;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-.bon-a-savoir-slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    font-size: 1.8rem; /* Agrandit le texte */
-    font-weight: bold;        
-       background: #142b40;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-}
-
-.bon-a-savoir-slide.active {
-    opacity: 1;
-}
-
-        .cards-container {
+        /* IMAGE CENTRÉE */
+        .image-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            width: 100%;
         }
 
-        .card {
-            background-color: white;
-            padding: 20px;
-            width: 250px;
+        .image-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* SECTION CONTACTS */
+        .contacts {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            margin: 20px 0;
         }
 
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
+        .contacts h1 {
+            color: #142b40;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-       
-        /* Style du bouton Participer */
-.btn-participer {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #a5c217;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
+        .contacts .contact-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
 
-/* Effet au survol */
-.btn-participer:hover {
-    background-color: #8ba30f;
-    transform: scale(1.05);
-}
+        .contacts .contact-info p {
+            margin: 10px 0;
+        }
+
+        /* BOUTON PARTICIPER */
+        .btn-participer {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #a5c217;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-participer:hover {
+            background-color: #8ba30f;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
         footer {
             background-color: #142b40;
             color: white;
@@ -210,51 +137,40 @@ form button:hover {
             bottom: 0;
             width: 100%;
         }
-
     </style>
 </head>
-    
+<body>
 
     <header>
         <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
+        <div class="logo">
+            <img src="contour.png" alt="Logo de CJA">
+        </div>
     </header>
+
     <nav>
         <a href="index.html">Accueil</a>
         <a href="voyage.html">Voyage</a>
         <a href="apropos.html">À Propos</a>
     </nav>
-    <div class="logo">
-            <img src="contour.png" alt="Logo de CJA">
-        </div>
-    </header>
-<body>
-     <div class="">
-        
-    </div>
-   <div class="image-container">
-        <img src="beh.jpg" alt="Image 2">
-    </div>
-  
-   <div class="">
-        
-    </div>
-     <!-- SECTION CONTACTS -->
-<section class="contacts">
-    <h1>Contactez-nous</h1>
-    <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter à l'une des adresses suivantes :</p>
- 
-    <div class="contact-info">
-        <p><strong> Responssable : DEGNON Israël:</strong> +229 0160526867</p>
-       
+
+    <div class="image-container">
+        <img src="beh.jpg" alt="Image d'illustration">
     </div>
 
-     <div class="">
-        
-    </div>
- 
+    <!-- SECTION CONTACTS -->
+    <section class="contacts">
+        <h1>Contactez-nous</h1>
+        <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter à l'une des adresses suivantes :</p>
+        <div class="contact-info">
+            <p><strong>Responsable : DEGNON Israël</strong> - +229 0160526867</p>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
-    </html>
+
+</body>
+</html>
