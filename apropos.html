@@ -81,35 +81,7 @@
     margin: 10px 0;
 }
 
-/* Formulaire de contact */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
 
-form label {
-    font-size: 18px;
-    color: #142b40;
-}
-
-form input, form textarea {
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background-color: #a5c217;
-    color: white;
-    font-size: 18px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
 
 /* Effet sur le bouton */
 form button:hover {
@@ -211,14 +183,7 @@ form button:hover {
             transform: translateY(0);
         }
 
-        footer {
-            background-color: #142b40;
-            color: white;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+       
         /* Style du bouton Participer */
 .btn-participer {
     display: inline-block;
@@ -237,11 +202,19 @@ form button:hover {
     background-color: #8ba30f;
     transform: scale(1.05);
 }
+        footer {
+            background-color: #142b40;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
     </style>
 </head>
     
-<body>
+
     <header>
         <h1>Carrefour Jeunesse Afrique - Renouer Nos Racines</h1>
     </header>
@@ -254,17 +227,22 @@ form button:hover {
             <img src="contour.png" alt="Logo de CJA">
         </div>
     </header>
-
+<body>
    
    <div class="image-container">
         <img src="beh.jpg" alt="Image 2">
     </div>
   
+   <div class="">
+        
+    </div>
      <!-- SECTION CONTACTS -->
 <section class="contacts">
     <h1>Contactez-nous</h1>
     <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter à l'une des adresses suivantes :</p>
-
+  <div class="">
+        
+    </div>
     <div class="contact-info">
         <p><strong> Responssable : DEGNON Israël:</strong> +229 0160526867</p>
        
@@ -278,24 +256,3 @@ form button:hover {
         &copy; 2024 Carrefour Jeunesse Afrique
     </footer>
     </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = "carrefourjeunesseafrique@gmail.com"; // Adresse email de destination
-    $subject = "Message de contact depuis le site web";
-    $body = "Nom : $name\nEmail : $email\n\nMessage :\n$message";
-    $headers = "From: $email";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Votre message a été envoyé avec succès.";
-    } else {
-        echo "Désolé, une erreur est survenue. Votre message n'a pas pu être envoyé.";
-    }
-}
-?>
-
-  
