@@ -48,6 +48,31 @@
                 right: 10px;
         }
 
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInZoom 1s forwards;
+        }
+
+        @keyframes fadeInZoom {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
         nav {
             display: flex;
             justify-content: center;
@@ -261,7 +286,7 @@
         <a href="apropos.html">À Propos</a>
     </nav>
     <div class="logo">
-            <img src="porte.jpg" alt="Logo de CJA">
+            <img src="logo.jpg" alt="Logo de CJA">
         </div>
     <div class="section-container">
         <img src="projet.jpeg" alt="Illustration du projet">
@@ -316,69 +341,26 @@
         <div class="section programme section-programme">
             <h2>📅 Programme détaillé</h2>
             <ul>
-                <li><h3>6 janvier </h3> Accueil des participants, installation et présentation du programme.</li>
-                <li><h3>7 janvier </h3> Présentation CJA, Rencontre avec les autorités communales. Jeu découverte comé et rencontre du noyau des jeunes de CJA. .</li>
-                <li><h3>8 janvier </h3> Départ pour Porto-Novo et visite du centre SONGHAI (agriculture durable, énergies renouvelables, artisanat moderne).</li>
-                <li><h3>9 janvier </h3> Départ pour Ouidah pour le festival Vodoun Days.</li>
-                <li><h3>10 janvier </h3> Fête du Vodou à Ouidah : découverte des rituels, danses et chants traditionnels. Rencontre avec des figures culturelles et spirituelles.</li>
-                <li><h3>11 janvier </h3> Séminaire sur l’entrepreneuriat et le leadership. Rencontre avec les membres de la diaspora ayant investi au Bénin.</li>
-                <li><h3>12 janvier </h3> Rencontre intergénérationnelle sur la thématique de la valorisation de la femme africaine.</li>
-                <li><h3>13 janvier </h3> Exploration des sites historiques (Abomey) et des initiatives patrimoniales.</li>
-                <li><h3>14 janvier </h3> L’histoire de la colonisation racontée par un historien béninois, suivie d’un débat.</li>
-                <li><h3>15 janvier </h3> Visite de Grand Popo et détente (danse autour du feu).</li>
-                <li><h3>16 janvier </h3> Cérémonie de clôture et présentation des retours d’expérience des participants.</li>
+                <li><h3>Mardi 6 janvier </h3> Accueil des participants, installation et présentation du programme.</li>
+                <li><h3>Mercredi 7 janvier </h3> Présentation CJA, Rencontre avec les autorités communales. Jeu découverte comé et rencontre du noyau des jeunes de CJA. Verres de bienvenue avec équipe CJA.</li>
+                <li><h3>Jeudi 8 janvier </h3> Départ pour Porto-Novo et visite du centre SONGHAI (agriculture durable, énergies renouvelables, artisanat moderne). Visite porto novo musée etnographique ADANDE</li>
+                <li><h3>Vendredi 9 janvier </h3> Départ pour Ouidah pour le festival Vodoun Days. Route de l'exclave, temple de pythons et céremonies vodoun days</li>
+                <li><h3>Samedi 10 janvier </h3> Fête du Vodou à Ouidah : découverte des rituels, danses et chants traditionnels. Vodoun days et retour à comé</li>
+                <li><h3>Dimanche 11 janvier </h3> Rencontre avec associations de jeunes </li>
+                <li><h3>Lundi 12 janvier </h3> Séminaire sur l’entrepreneuriat et le leadership. Rencontre avec les membres de la diaspora ayant investi au Bénin</li>
+                <li><h3>Mardi 13 janvier </h3> Exploration des sites historiques (Abomey) et des initiatives patrimoniales. Rencontre intergénérationnelle sur la thématique de la valorisation de la femme africaine</li>
+                <li><h3>Mercredi 14 janvier </h3> Visite de Grand Popo et détente ( repas à la mer , danse autour du feu) </li>
+                <li><h3>Jeudi 15 janvier </h3> L’histoire de la colonisation racontée par un historien béninois, suivie d’un débat. Soirée de départ </li>
+                <li><h3>Vendredi 16 janvier </h3> Rangement, départ pour ganvié. Derniers souvenirs CPA, visite  amazone et place des matyrs</li>
             </ul>
         </div>
-
-
-
-            <table border="1">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Petit Déjeuner</th>
-            <th>Activité Matin</th>
-            <th>Repas Midi</th>
-            <th>Après-midi</th>
-            <th>Repas Soir</th>
-            <th>Soirée</th>
-            <th>Logement</th>
-            <th>Transport</th>
-            <th>Référent</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Jour 1</td>
-            <td>Café + Pain</td>
-            <td>Visite culturelle</td>
-            <td>Riz + Poulet</td>
-            <td>Atelier de formation</td>
-            <td>Soupe + Pain</td>
-            <td>Veillée artistique</td>
-            <td>Hôtel XYZ</td>
-            <td>Bus</td>
-            <td>Nom du référent</td>
-        </tr>
-        <tr>
-            <td>Jour 2</td>
-            <td>Thé + Beignets</td>
-            <td>Conférence</td>
-            <td>Pâtes + Viande</td>
-            <td>Sortie découverte</td>
-            <td>Salade + Jus</td>
-            <td>Jeux & échanges</td>
-            <td>Auberge ABC</td>
-            <td>Minibus</td>
-            <td>Nom du référent</td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-
         
+   <div class="image-container">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+ 
         <div class="section durée"> <h2> ⏳ Durée : 10 jours d'immersion totale au Bénin. </h2>
              <div class="content">
                 <ol>
