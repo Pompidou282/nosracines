@@ -49,29 +49,8 @@
         }
 
         
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px;
-        }
 
-        .image-container img {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            opacity: 0;
-            transform: scale(0.8);
-            animation: fadeInZoom 1s forwards;
-        }
-
-        @keyframes fadeInZoom {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+       
 
         nav {
             display: flex;
@@ -245,6 +224,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+         .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInZoom 1s forwards;
+        }
 
         footer {
             background-color: #1f2b40;
@@ -254,6 +250,7 @@
             bottom: 0;
             width: 100%;
         }
+            
         /* Style du bouton Participer */
 .btn-participer {
     display: inline-block;
